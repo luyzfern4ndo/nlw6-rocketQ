@@ -32,7 +32,7 @@ function handleClick(event, check = true) {
 
   const questionId = event.target.dataset.id
 
-  form.setAttribute('action', `/room/${roomId}/${questionId}/${slug}`)
+  form.setAttribute('action', `/question/${roomId}/${questionId}/${slug}`)
 
   modalTitle.innerHTML = check ? 'Marcar como lida' : 'Excluir Pergunta'
   modalDescription.innerHTML = check
