@@ -6,13 +6,14 @@ const initDatabase = {
 
     await db.exec(`CREATE TABLE rooms (
       id INTEGER PRIMARY KEY, 
-      password TEXT
+      password VARCHAR
       )`)
 
     await db.exec(`CREATE TABLE questions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT,
-        read INT
+        read INT DEFAULT 0,
+        room INT
       )
     `)
 
